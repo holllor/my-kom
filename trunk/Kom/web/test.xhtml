@@ -1,0 +1,195 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <h:head>
+        <title>Командировка</title>
+        <link rel="stylesheet" type="text/css" href="css/allcss.css" ></link>
+    </h:head>
+    <h:body id="body">
+        <h:form  id="form" title="testForm">
+            <div  class="fio"> 1. Ф.И.О.
+                <h:inputText  id="fio1" value="#{FaceKom.fio1}"  />
+                <h:inputText  id="fio2"  value="#{FaceKom.fio2}"/>
+                <h:inputText  id="fio3" value="#{FaceKom.fio3}"/>
+
+            </div>
+
+            <div class="specZvn" >1.1 Специальное звание
+                <h:inputText id="specZvn1" value="#{FaceKom.specZvn1}" />
+                <h:selectOneListbox   size="1"  >
+                    <f:selectItems  id="specZvn2" value="#{FaceKom.specZvan}"/>    
+                </h:selectOneListbox>
+
+                <h:selectOneListbox   size="1" >
+                    <f:selectItems  id="specZvn3" value="#{FaceKom.specZvn3}"/>  
+                </h:selectOneListbox> 
+
+
+            </div>
+
+            <div class="dolj1"> 1.2 Должность
+                <h:selectOneListbox  size="1"  title="test">
+                    <f:selectItems id="dolj1"   value="#{FaceKom.dolj1}"/> 
+                </h:selectOneListbox>
+            </div>
+            <div class="podraz"> 1.3 Подразделение
+                <h:selectOneListbox id="podraz2" size="1"  title="test">
+                    <f:selectItems id="podrazd1"   value="#{FaceKom.podraz1}"/>
+                </h:selectOneListbox>
+            </div>
+            <div class="nomerKu">2. Номер командировачного удостоверения
+                <h:inputText  id="nomerKu1" value="#{FaceKom.nomerKu1}" />
+            </div>
+            <div class="mestoK">3. Место командировки
+                <h:inputText  id="mestoK1"  size="40" value="#{FaceKom.mestoK1}"/>
+            </div>
+            <div class="osnovV">4. Основание выезда
+                <h:inputText  id="osnovV1" value="#{FaceKom.osnovV1}" />
+                <h:inputText  id="osnovV2" value="#{FaceKom.osnovV2}"/>
+                <h:inputText  id="osnovV3"  value="#{FaceKom.osnovV3}"/>
+                <h:inputText  id="osnovV4"  value="#{FaceKom.osnovV4}"/>
+                <br/>
+                <h:selectOneListbox id="osnovV5" size="1"  title="test">
+                    <f:selectItems   value="#{FaceKom.osnovV5}"/>
+                </h:selectOneListbox>
+                <h:selectOneListbox id="osnovV6" size="1"  title="test">
+                    <f:selectItems   value="#{FaceKom.osnovV6}"/>
+                </h:selectOneListbox>
+                <h:inputText  id="osnovV7" value="#{FaceKom.osnovV7}"/>
+                <h:inputText  id="osnovV8" value="#{FaceKom.osnovV8}"/>
+                <h:inputText  id="osnovV9" value="#{FaceKom.osnovV9}"/>
+                <h:selectOneListbox id="osnovV10" size="1"  title="test">
+                    <f:selectItems   value="#{FaceKom.osnovV10}"/>
+                </h:selectOneListbox>
+                <h:selectOneListbox id="osnovV11" size="1"  title="test">
+                    <f:selectItems   value="#{FaceKom.osnovV11}"/>
+                </h:selectOneListbox>
+            </div>
+            <div class="formaK">5. Форма командировки
+                <h:inputText  id="formaK1" value="#{FaceKom.formaK1}"/>
+                <h:inputText  id="formaK2" value="#{FaceKom.formaK2}"/>
+            </div>
+            <div class="zadch">6. Задачи
+                <h:inputText  id="zadch1" value="#{FaceKom.zadch1}"/>
+                <h:inputText  id="zadch2" value="#{FaceKom.zadch2}"/>
+                <h:inputText  id="zadch3" value="#{FaceKom.zadch3}"/>
+            </div>
+            <div class="rukovG">7. Руководитель (старший) группы
+                <h:selectOneListbox id="rukovG1" size="1"  title="test">
+                    <f:selectItems   value="#{FaceKom.rukovG1}"/>
+                </h:selectOneListbox>
+                <h:selectOneListbox id="rukovG2" size="1"  title="test">
+                    <f:selectItems   value="#{FaceKom.rukovG2}"/>
+                </h:selectOneListbox>
+                <h:inputText  id="rukovG3" value="#{FaceKom.rukovG3}"/>
+                <h:inputText  id="rukovG4" value="#{FaceKom.rukovG4}"/>
+                <h:inputText  id="rukovG5" value="#{FaceKom.rukovG5}"/>
+            </div>
+            <div class="sostavG"> 8. Состав группы
+                <h:selectOneListbox id="sostavG1" size="1"  title="test">
+                    <f:selectItems   value="#{FaceKom.sostavG1}"/>
+                </h:selectOneListbox>
+                <h:inputText  id="sostavG2" />
+                <h:selectOneListbox id="sostavG3" size="1"  title="test">
+                    <f:selectItems   value="#{FaceKom.sostavG3}"/>
+                </h:selectOneListbox>
+                <h:inputText  id="sostavG4" value="#{FaceKom.sostavG4}"/>
+                <h:selectOneListbox id="sostavG5" size="1"  title="test">
+                    <f:selectItems   value="#{FaceKom.sostavG5}"/>
+                </h:selectOneListbox>
+                <h:inputText  id="sostavG6" />
+            </div>
+            <div class="srokK">9. Срок командировки
+                <h:inputText  id="srokK1" value="#{FaceKom.srokK1}"/>
+            </div>
+            <div class="srokKprod">10. Срок командировки продлен на   <h:inputText  id="srokKprod6" />   дней
+                <h:selectOneListbox id="srokKprod1" size="1"  title="test">
+                    <f:selectItems   value="#{FaceKom.srokKprod1}"/>
+                </h:selectOneListbox>
+                <h:selectOneListbox id="srokKprod2" size="1"  title="test">
+                    <f:selectItems   value="#{FaceKom.srokKprod2}"/>
+                </h:selectOneListbox>
+                <h:inputText  id="srokKprod3" value="#{FaceKom.srokKprod3}"/>
+                <h:inputText  id="srokKprod4" value="#{FaceKom.srokKprod4}"/>
+                <h:inputText  id="srokKprod5" value="#{FaceKom.srokKprod5}"/>
+
+            </div>
+            <div class="prodVd">11. Продолжительность выезда дней (с учетом времени нахождения в пути)
+                <h:inputText  id="prodVd1" value="#{FaceKom.prodVd1}"/>
+            </div>
+            <div class="datUb">11.1 Дата убытия
+                <h:inputText  id="datUb1" value="#{FaceKom.datUb1}" />
+            </div>
+            <div class="datPrib">11.2 Дата прибытия
+                <h:inputText  id="datPrib1" value="#{FaceKom.datPrib1}"/>
+            </div>
+            <div class="viavlN">12. Выявлены недостатки
+                <h:selectOneListbox id="viavlN1" size="1"  title="test">
+                    <f:selectItems   value="#{FaceKom.viavlN1}"/>
+                </h:selectOneListbox> <br/>
+                <h:inputText  id="viavlN2" value="#{FaceKom.viavlN2}"/>
+            </div>
+            <div class="kontrOsNed">13. Контроль за осуществлением недостатков осуществляет
+                <h:selectOneListbox id="kontrOsNed1" size="1"  title="test">
+                    <f:selectItems   value="#{FaceKom.kontrOsNed1}"/>
+                </h:selectOneListbox>
+                <h:selectOneListbox id="kontrOsNed2" size="1"  title="test">
+                    <f:selectItems   value="#{FaceKom.kontrOsNed2}"/>
+                </h:selectOneListbox>
+                <h:inputText  id="kontrOsNed3" value="#{FaceKom.kontrOsNed3}"/>
+                <h:inputText  id="kontrOsNed4" value="#{FaceKom.kontrOsNed4}"/>
+                <h:inputText  id="kontrOsNed5" value="#{FaceKom.kontrOsNed5}"/>
+                <br/>
+                <h:selectOneListbox id="kontrOsNed6" size="1"  title="test">
+                    <f:selectItems   value="#{FaceKom.kontrOsNed6}"/>
+                </h:selectOneListbox>
+                <h:selectOneListbox id="kontrOsNed7" size="1"  title="test">
+                    <f:selectItems   value="#{FaceKom.kontrOsNed7}"/>
+                </h:selectOneListbox>
+            </div>
+            <div class="formRel">14. Форма реализации результатов выезда:
+                <h:selectOneListbox id="formRel2" size="1"  title="test">
+                    <f:selectItems   value="#{FaceKom.formRel2}"/>
+                </h:selectOneListbox> 
+                <h:inputText  id="formRel1" value="#{FaceKom.formRel1}"/>
+                <br/>
+                на месте 
+                <h:selectOneListbox id="formRel3" size="1"  title="test">
+                    <f:selectItems   value="#{FaceKom.formRel3}"/>
+                </h:selectOneListbox> 
+                <h:inputText  id="formRel4" value="#{FaceKom.formRel4}"/> <br/>
+                по прибытию в УТ 
+                <h:selectOneListbox id="formRel5" size="1"  title="test">
+                    <f:selectItems   value="#{FaceKom.formRel5}"/>
+                </h:selectOneListbox>
+                <h:inputText  id="formRel6" value="#{FaceKom.formRel6}"/> <br/>
+                <h:selectOneListbox id="formRel7" size="1"  title="test">
+                    <f:selectItems   value="#{FaceKom.formRel7}"/>
+                </h:selectOneListbox>
+                <h:inputText  id="formRel8" value="#{FaceKom.formRel8}"/>
+            </div>
+            <div class="viavlPol">15. Выявлен положительный опыт 
+                <h:selectOneListbox id="viavlPol1" size="1"  title="test">
+                    <f:selectItems   value="#{FaceKom.viavlPol1}"/>
+                </h:selectOneListbox>
+                <h:inputText  id="viavlPol2" value="#{FaceKom.viavlPol2}"/></div>
+            <div class="otmOvip">16. Отметка о выполнении служебного задания 
+                <h:inputText  id="otmOvip1" value="#{FaceKom.otmOvip1}"/> <br/>
+                причины <h:inputText  id="otmOvip2" value="#{FaceKom.otmOvip2}"/>
+            </div>
+            <div class="datSos">17. Дата составления документа 
+                <h:inputText  id="datSos1" value="#{FaceKom.datSos1}"/></div>
+            <div class="datPodp">18. Дата подписания       
+                <h:inputText  id="datPodp1" value="#{FaceKom.datPodp1}"/>
+                инициалы начальника <h:inputText  id="datPodp2" value="#{FaceKom.datPodp2}"/></div> 
+            <p> <h:commandButton value="сохранить" action="#{FaceKom.next()}" /></p>
+            <h:link id="ll" outcome="jsf/test2.xhtml"    >test2</h:link>
+        </h:form>
+
+
+
+    </h:body>
+</html>
+
