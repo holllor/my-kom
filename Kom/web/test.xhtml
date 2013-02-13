@@ -5,12 +5,12 @@
       xmlns:f="http://java.sun.com/jsf/core">
     <h:head>
         <title>Командировка</title>
-        <link rel="stylesheet" type="text/css" href="css/allcss.css" ></link>
+        <link rel="stylesheet" type="text/css" href="/css/allcss.css" ></link>
     </h:head>
-    <h:body id="body">
+    <h:body   >
         <h:form  id="form" title="testForm">
             <div  class="fio"> 1. Ф.И.О.
-                <h:inputText  id="fio1" value="#{FaceKom.fio1}"  />
+                <h:inputText  id="fio1"   value="#{FaceKom.fio1}"  />
                 <h:inputText  id="fio2"  value="#{FaceKom.fio2}"/>
                 <h:inputText  id="fio3" value="#{FaceKom.fio3}"/>
 
@@ -181,12 +181,24 @@
             </div>
             <div class="datSos">17. Дата составления документа 
                 <h:inputText  id="datSos1" value="#{FaceKom.datSos1}"/></div>
-            <div class="datPodp">18. Дата подписания       
-                <h:inputText  id="datPodp1" value="#{FaceKom.datPodp1}"/>
+            
+            
+            
+            <div class="datPodp">18. Дата подписания <h:inputText  id="datPodp1" value="#{FaceKom.datPodp1}"/>
+               
                 инициалы начальника <h:inputText  id="datPodp2" value="#{FaceKom.datPodp2}"/></div> 
-            <p> <h:commandButton value="сохранить" action="#{FaceKom.next()}" /></p>
-            <h:link id="ll" outcome="jsf/test2.xhtml"    >test2</h:link>
+
+            <p> <h:commandButton value="сохранить"  > 
+                    <f:ajax execute="datPodp1 fio1" render="out out2 fio1"/> 
+                </h:commandButton>
+            </p>
+            
+            <h:outputText id="out" value="#{FaceKom.next()}"/> 
+            <br/>
+            <h:outputText id="out2" value="#{FaceKom.fio1} dffd"/>
         </h:form>
+
+        <h:link id="ll"  outcome="/jsf/index.xhtml"    >jsf/test</h:link> <b/>
 
 
 
