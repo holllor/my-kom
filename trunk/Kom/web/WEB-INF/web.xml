@@ -11,7 +11,8 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>Faces Servlet</servlet-name>
-        <url-pattern>*.xhtml</url-pattern>
+        <url-pattern>*.xhtml</url-pattern> 
+       <!--  <url-pattern>*.faces</url-pattern> --> 
      <!--   <url-pattern>/faces/*</url-pattern>-->
     </servlet-mapping>
     <session-config>
@@ -19,9 +20,27 @@
             30
         </session-timeout>
     </session-config>
+    <!--  ограничение на каталог, только для зарегистрированных пользователей-->
+    <security-constraint>
+        <web-resource-collection>
+            <url-pattern>/jsf/*</url-pattern>
+        </web-resource-collection>    
+        <auth-constraint>
+            <role-name>test</role-name>
+            <role-name>admin</role-name>
+        </auth-constraint>
+    </security-constraint>
+   <!-- -->
+    <login-config>
+        <auth-method>FORM</auth-method>
+        <form-login-config>
+            <form-login-page>/pgs/login.xhtml</form-login-page>
+            <form-error-page>/pgs/errorLogin.xhtml</form-error-page>
+        </form-login-config>
+    </login-config>
+   
     <welcome-file-list>
    <!--  <welcome-file>faces/test.xhtml</welcome-file>-->
-
-        <welcome-file>test.xhtml</welcome-file>
+        <welcome-file>/index.xhtml</welcome-file>
     </welcome-file-list>
 </web-app>
